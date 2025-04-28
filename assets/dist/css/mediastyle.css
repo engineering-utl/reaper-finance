@@ -1,0 +1,151 @@
+@media (max-width: 991px) {
+    header .navbar-collapse {
+        text-align: center;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    header .btn-contact {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .hero-section .hero-text {
+        text-align: center;
+    }
+
+    .hero-section .hero-image {
+        display: none;
+    }
+
+    .welcome-item {
+        margin-bottom: 20px;
+    }
+
+    .welcome-item {
+        margin-bottom: 20px;
+    }
+
+    .empower-section p {
+        font-size: 16px;
+    }
+
+    .giveus-section h2 {
+        font-size: 20px;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-area .accordion-button {
+        font-size: 16px;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .social-icons a {
+        color: white;
+        font-size: 34px;
+        height: 34px;
+        transition: color 0.3s;
+        padding: 0 1.5rem;
+    }
+
+    .footer-menu span {
+        display: none;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+    }
+
+    .newsletter,
+    .newsletter h5,
+    .subscribe-block {
+        width: 100%;
+    }
+
+    .contact-info-area {
+        min-height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .hero-section {
+        height: 400px;
+    }
+
+    .hero-section .hero-text {
+        padding: 0 2rem;
+    }
+
+    .welcome-item p {
+        min-height: auto;
+    }
+
+    .giveus-section h2 {
+        font-size: 35px;
+    }
+
+    .faq-area {
+        padding: 0 0 4rem 0;
+    }
+
+    .subscribe-block h5 {
+        width: 100%;
+    }
+
+    .social-icons {
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section .hero-text p {
+        font-size: 0.8rem;
+    }
+
+    .footer-menu {
+        gap: 8px;
+    }
+
+    .footer-menu a {
+        font-size: 18px;
+    }
+
+    .footer {
+        padding: 2rem 0;
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .giveus-section p {
+        margin-bottom: 0;
+    }
+
+    .social-grid {
+        margin-top: 2rem;
+    }
+
+    .faq-area .accordion-body {
+        padding: 1rem 0.2rem;
+    }
+
+    header .navbar-light .navbar-nav {
+        margin-left: 0;
+    }
+}

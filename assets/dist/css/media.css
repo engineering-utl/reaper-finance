@@ -1,0 +1,362 @@
+@media (max-width: 768px) {
+    .money-safe-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .money-safe-text {
+        max-width: 100%;
+    }
+
+    .money-safe-img {
+        margin-top: 20px;
+    }
+
+    .bannerContainer {
+        width: 100%;
+    }
+
+    .bannerContainer .bnrtextBlock {
+
+        top: 60%;
+        left: 3%;
+        transform: translate(0, -50%);
+
+    }
+
+    .bannerContainer .bnrtextBlock h1 {
+        font-size: 40px;
+        margin-top: 5rem;
+    }
+
+    .bannerContainer .bnrtextBlock p {
+        width: 100%;
+    }
+
+    .hero {
+        height: 60dvh;
+    }
+
+    .slanted-edge {
+        display: none;
+    }
+
+    .debt-reaping {
+        padding: 30px 0;
+    }
+
+    .popcoinarea h2 {
+        margin-bottom: 0;
+    }
+
+    .debt-reaping h2 {
+        font-size: 33px;
+        margin-bottom: 2rem;
+    }
+
+    .debt-reaping .uptext {
+        text-align: center;
+    }
+
+    .timeline-content p {
+
+        word-break: break-all;
+    }
+
+    body,
+    html {
+        overflow-x: hidden !important;
+    }
+
+    .reviewBlock .owl-theme .owl-nav {
+        top: 8px;
+        right: 8%;
+        transform: translate(-50%, -50%);
+    }
+
+    .reviewBlock .owl-carousel .item {
+        margin-top: 5rem;
+    }
+
+    .exploreBlock .skewed {
+        display: none;
+    }
+
+    .money-safe-text h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .money-safe-text p {
+        text-align: center;
+    }
+
+    .money-safe-btn {
+
+        margin: 1.5rem auto;
+        display: table;
+    }
+
+    .capitalArea .owl-theme .owl-nav {
+        top: 0;
+    }
+
+    .capitalArea .owl-carousel.owl-drag .owl-item {
+        margin-top: 6rem;
+    }
+
+    .capitalArea .capitalItem {
+        height: 400px;
+    }
+
+    .capitalArea .capitalItem .capital-poster {
+        height: 397px;
+    }
+
+    .contact-form {
+        width: 92dvw;
+        padding: 2rem;
+        margin: -30rem auto 5rem;
+    }
+
+    .contact-form p {
+        width: 100%;
+    }
+
+    .footer .footerleftblock p,
+    .footer h5,
+    .footer ul li {
+        text-align: center;
+    }
+
+    .footer .footerleftblock {
+        width: 100%;
+    }
+
+    .important-message {
+        padding: 20px;
+        text-align: justify;
+    }
+
+    .btn-revive {
+        margin: 20px 0;
+    }
+
+    header .nav-link {
+        margin-left: 10px;
+    }
+
+    .bannerContainer .bnrtextBlock p {
+        padding: 0 2rem;
+        text-align: left;
+        margin-left: -28px;
+    }
+
+    .inner-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inner-banner {
+        padding: 74px 0 0;
+    }
+
+    .about-detailarea .pg-heading h2 {
+        font-size: 30px;
+    }
+
+    .about-detailarea article p {
+        text-align: justify;
+    }
+
+    .reapingArea .reapingposter {
+        width: 100%;
+        height: 200px;
+    }
+
+    .reapingArea .reapingposter img {
+        height: 100%;
+    }
+
+    .inner-banner .bannerposter {
+        /* height: 140px !important; */
+        height: auto !important;
+    }
+
+    .inner-banner img {
+        margin-top: 0;
+        max-width: auto !important;
+    }
+
+    .reapingArea {
+        width: 100%;
+        padding: 4em 0 33em;
+        margin-top: -14dvw;
+    }
+
+    .reviewBlock .owl-carousel .item .review-content article,
+    .timeline-content p {
+        text-align: justify;
+    }
+
+    .timeline-content {
+        padding: 0 0 0 5px;
+    }
+
+    .popcoinarea .coin-icons img {
+        max-height: 40px;
+        margin: 0 0 1.5rem;
+        padding: 0 10px;
+    }
+
+    .navbar-brand {
+        width: 50%;
+    }
+
+    .navbar-brand img {
+        width: 100%;
+        height: auto;
+    }
+
+    .reviewBlock .owl-carousel .item .review-content .review-name-box {
+        align-items: center;
+    }
+
+    .reviewBlock .owl-carousel .item .text-muted {
+        white-space: nowrap;
+    }
+
+    .reviewBlock .owl-carousel .item .review-avatar {
+        width: 57px;
+        height: 50px;
+
+    }
+
+    .exploreBlock h2 {
+        font-size: 30px;
+    }
+
+    .footer ul {
+        column-count: 2;
+    }
+
+    .trustline-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+        border-radius: 25px;
+    }
+
+    .inner-banner h1 {
+        font-size: 38px;
+    }
+
+    .trustline-btn {
+        margin-top: 10px;
+        padding: 10px 25px;
+    }
+
+    .coin-item {
+        text-align: center;
+    }
+
+    .add-coins-area {
+
+        margin-bottom: 20rem;
+    }
+
+    .current-vote {
+        float: none;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .trustline-item span {
+        line-height: normal;
+    }
+
+    .about-detailarea article {
+        margin-bottom: 0;
+    }
+
+    .cr_hero_img {
+        object-fit: cover;
+    }
+
+    .trustline-item span {
+        color: #000;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+
+    }
+
+    .trustline-btn {
+        line-height: 20px;
+    }
+
+    .inner-banner.archivebanner {
+        width: 100%;
+        height: 250px;
+        position: relative;
+    }
+
+    .inner-banner.archivebanner h1 {
+        margin-top: 7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannerContainer .bnrtextBlock h1 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    .bannerContainer .bnrtextBlock p {
+        font-size: 18px;
+    }
+
+    .hero {
+        height: 70dvh;
+    }
+
+    .bannerContainer .bnr-btn {
+        padding: 10px 26px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .reviewBlock .owl-theme .owl-nav,
+    .capitalArea .owl-theme .owl-nav {
+        top: 8px;
+        right: 11%;
+        transform: translate(-50%, -50%);
+    }
+
+    .reviewBlock .owl-carousel .item {
+        margin-top: 1rem;
+    }
+
+    .section-hd h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .trustline-btn {
+        line-height: 17px;
+        font-size: 13px;
+    }
+
+    .trustline-item span {
+        color: #000;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 600;
+    }
+
+    .trustline-area {
+        padding: 30px 0;
+    }
+}

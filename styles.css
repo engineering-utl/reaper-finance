@@ -1,0 +1,615 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #2d572c;
+    color: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1b3d1b;
+}
+
+.top-bar .contact-info span {
+    margin-right: 20px;
+}
+
+.top-bar .buttons .button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.top-bar .buttons .button.get-started {
+    background-color: #2d572c;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2d572c;
+}
+
+.main-nav .logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.hero {
+    position: relative;
+    background-image: url('src/background-image.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    padding-left: 50px;
+}
+
+.hero-content {
+    max-width: 50%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content .highlight {
+    color: #4CAF50;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.cta-button:hover {
+    background-color: #3e8e41;
+}
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 50px;
+    background-color: #f9f9f9;
+    gap: 20px; /* Add this line for spacing between service boxes */
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* Adjust width to account for the gap */
+}
+
+.service-item i {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.1em;
+    color: #333;
+}
+/* About Section Styles */
+.about {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.features li i {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.statistics {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+.stat p {
+    font-size: 1em;
+    color: #666;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recent-projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.recent-projects h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.recent-projects .description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.project-item:hover .caption {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.contact {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-group button:hover {
+    background-color: #3e8e41;
+}
+
+/* Partners Section Styling */
+.partners-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.partners-section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partners-section .section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.partners-section .section-description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.partners-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.partner-item {
+    padding: 10px;
+}
+
+.partner-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Slick Carousel Customization */
+.slick-prev, .slick-next {
+    background-color: #4CAF50;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: #3e8e41;
+}
+
+/* Footer Section Styling */
+.footer-section {
+    background-color: #2d572c;
+    color: white;
+    padding: 50px 20px;
+}
+
+.footer-section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-about,
+.footer-contact,
+.footer-gallery,
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-about h4,
+.footer-contact h4,
+.footer-gallery h4,
+.footer-social h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-gallery ul,
+.footer-social .social-icons {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-gallery ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-gallery ul li {
+    margin-bottom: 10px;
+}
+
+.footer-gallery ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-gallery ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.footer-social .social-icons a:hover {
+    color: #4CAF50;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Styles for login page */
+.login-container {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+}
+
+.login-container form div {
+    margin-bottom: 15px;
+}
+
+.login-container form div label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container form div input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.login-container form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container form button:hover {
+    background-color: #45a049;
+}
+
+
+/* Responsive Styles for Partners Section */
+@media (max-width: 1024px) {
+    .partners-section .section-title {
+        font-size: 1.75rem;
+    }
+
+    .partners-section .section-description {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+    .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Ensure gap is maintained in column layout */
+    }
+
+    .service-item {
+        width: 80%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .statistics {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-about,
+    .footer-contact,
+    .footer-gallery,
+    .footer-social {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .partners-section .section-title {
+        font-size: 1.5rem;
+    }
+
+    .partners-section .section-description {
+        font-size: 0.8rem;
+    }
+
+    .partner-item img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+    .service-item {
+        width: 90%;
+    }
+    .statistics {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .recent-projects h2 {
+        font-size: 2em;
+    }
+
+    .recent-projects .description {
+        font-size: 1em;
+    }
+}

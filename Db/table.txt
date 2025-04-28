@@ -1,0 +1,116 @@
+CREATE DATABASE `Revival` ;
+
+-- Revival.blogs definition
+
+CREATE TABLE `blogs` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `blogger_name` varchar(255) NOT NULL,
+  `blogger_image` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `status` enum('enabled','disabled') DEFAULT 'enabled',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Revival.contact_submissions definition
+
+CREATE TABLE `contact_submissions` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `status` enum('pending','contacted') DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Revival.customer_reviews definition
+
+CREATE TABLE `customer_reviews` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(255) NOT NULL,
+  `designation` varchar(255) NOT NULL,
+  `company_name` varchar(255) NOT NULL,
+  `company_tagline` varchar(255) NOT NULL,
+  `time_of_comment` datetime DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `comment` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Revival.executives definition
+
+CREATE TABLE `executives` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `position` varchar(255) NOT NULL,
+  `facebook_link` varchar(255) DEFAULT NULL,
+  `x_link` varchar(255) DEFAULT NULL,
+  `linkedin_link` varchar(255) DEFAULT NULL,
+  `status` enum('enabled','disabled') DEFAULT 'enabled',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Revival.faqs definition
+
+CREATE TABLE `faqs` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `question` varchar(255) NOT NULL,
+  `answer` text NOT NULL,
+  `order` int NOT NULL,
+  `status` enum('enabled','disabled') DEFAULT 'enabled',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `order` (`order`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Revival.nfts definition
+
+CREATE TABLE `nfts` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `handler_image` varchar(255) NOT NULL,
+  `handler_name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `external_link` varchar(255) NOT NULL,
+  `status` enum('enabled','disabled') DEFAULT 'enabled',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Revival.roadmap definition
+
+CREATE TABLE `roadmap` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `roadmap_date` date NOT NULL,
+  `description` text NOT NULL,
+  `status` enum('enabled','disabled') DEFAULT 'enabled',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Revival.users definition
+
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

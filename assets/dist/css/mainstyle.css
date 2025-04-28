@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: "Inter", serif; */
+/* font-family: "Poppins", serif; */
+/* Styles for Editable content */
+.editable {
+    border: 1px dashed #ccc;
+    outline: 0;
+    padding: 5px;
+}
+
+.editable:hover {
+    border-color: #666;
+}
+
+.hidden {
+    display: none;
+}
+
+.non-editable {
+    /* Add any styles for non-editable elements here */
+}
+
+/* Styles for Editable content */
+body {
+    font-family: "Inter", serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+p {
+    font-family: "Inter", serif;
+}
+
+header {
+    width: 100%;
+    background: #fff;
+}
+
+header .navbar {
+    padding: 2rem 0;
+}
+
+header .navbar-brand img {
+    height: 40px;
+}
+
+
+
+header .nav-link:hover {
+    color: #ff9900;
+}
+
+header .btn-contact {
+    background-color: #f4a261;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+}
+
+header .btn-contact:hover {
+    background-color: #e76f51;
+    color: #fff;
+}
+
+header .navbar-light .navbar-nav {
+    margin-left: 11dvw;
+}
+
+header .navbar-light .navbar-nav .nav-link {
+    color: #363732;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.hero-section {
+    /* background: url('../images/banner-bg-photo.png') no-repeat center center/cover; */
+    /* padding: 100px 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 816px;
+    color: white;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+}
+
+.hero-section .overlay {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section .hero-text {
+    padding: 0 5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .hero-text h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #262522;
+    text-align: center;
+}
+
+.hero-section .hero-text p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #262522;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn-try {
+    background-color: #f4a261;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+    margin: 0 auto;
+    display: table;
+}
+
+.hero-section .btn-try:hover {
+    background-color: #e76f51;
+    color: #fff;
+}
+
+.hero-section .hero-image {
+    max-width: 100%;
+}
+
+.welcome-section {
+    padding: 5rem 0;
+    background-color: #f6fbfe;
+}
+
+.welcome-item {
+    border-radius: 24px;
+    border: 1px solid #E7E8E9;
+    background: #F5F5F5;
+    padding: 2rem;
+    text-align: left;
+    transition: 0.3s ease-in-out;
+}
+
+.welcome-item img {
+    width: 32px;
+    height: 32px;
+    color: #e76f51;
+    margin-bottom: 14px;
+}
+
+.welcome-item h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #363732;
+    margin-bottom: 8px;
+}
+
+.welcome-item p {
+    font-size: 14px;
+    color: #757575;
+    font-weight: 400;
+    font-size: 16px;
+    min-height: 10rem;
+    width: 100%;
+}
+
+.welcome-item .icon-arrow {
+    text-align: right;
+    color: #e76f51;
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.welcome-item .icon-arrow img {
+    width: 32px;
+    height: 32px;
+}
+
+.empower-section {
+    background-color: #363732;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.empower-section p {
+    font-size: 24px;
+    font-weight: 400;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.27rem 0;
+}
+
+.giveus-section {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.giveus-section h2 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #262522;
+}
+
+.giveus-section p {
+    font-size: 20px;
+    color: #757575;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.social-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.faq-area {
+    padding: 4rem 0 8rem 0;
+}
+
+.faq-area .accordion-button {
+    font-size: 20px;
+    font-weight: 400;
+    color: #757575;
+    background-color: #fff;
+    border: none;
+    padding: 1.2rem 0;
+}
+
+.faq-area .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-area .accordion-button:not(.collapsed) {
+    color: #f4a261;
+    background-color: #fff;
+}
+
+.faq-area .accordion-item {
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-area .accordion-body {
+    color: #757575;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.social-area {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 64px;
+    height: 64px;
+    transition: color 0.3s;
+    padding: 0 2.625rem;
+}
+
+.social-icons a:first-child {
+    padding-left: 0;
+}
+
+.social-icons a:last-child {
+    padding-right: 0;
+}
+
+.social-icons a:hover {
+    color: #f4a261;
+}
+
+.subscribe-block {
+    margin-top: 1rem;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.newsletter input {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    width: 250px;
+    font-size: 16px;
+
+}
+
+.newsletter button {
+    background-color: #f4a261;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+.newsletter button:hover {
+    background-color: #e76f51;
+}
+
+.subscribe-block h5 {
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #fff;
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #363732;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer-menu span {
+    font-size: 24px;
+}
+
+.footer-menu a:hover {
+    color: #e76f51;
+}
+
+.footer-logo {
+    margin: 20px 0 2rem;
+
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #4F5F6A;
+    text-align: center;
+    margin: 0;
+    font-family: "Poppins", serif;
+}
+
+.footer-text a {
+    color: #4F5F6A;
+    text-decoration: underline;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* contact */
+
+.contact-heading {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 2.5rem;
+}
+
+.contact-heading h2 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #262522;
+    margin-bottom: 20px;
+}
+
+.contact-heading p {
+    color: #757575;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contact-form-area {
+    padding: 40px 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form-area input,
+.contact-form-area textarea {
+    width: 100%;
+    padding: 12px;
+    color: #757575;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    border-radius: 24px;
+    border: 1px solid #E7E8E9;
+    background-color: #F5F5F5;
+    transition: all 0.3s ease;
+}
+
+.contact-form-area label {
+    color: #757575;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 12px;
+    padding-left: 15px;
+}
+
+.contact-form-area input:focus,
+.contact-form-area textarea:focus {
+    border-color: #e76f51;
+    box-shadow: 0 0 5px rgba(231, 111, 81, 0.5);
+    outline: none;
+}
+
+input::placeholder,
+.contact-form-area textarea::placeholder {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.contact-form-area textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form-area button {
+    background-color: #f4a261;
+    color: #F5F5F5;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+    width: 100%;
+    margin-top: 0.6rem;
+}
+
+.contact-form-area button:hover {
+    background-color: #de8f4f;
+    color: #fff;
+}
+
+.contact-info-area {
+    width: 100%;
+    padding: 2rem;
+    min-height: 620px;
+    border-radius: 24px;
+    background-color: #f8f8f8;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+    border: 1px solid #E7E8E9;
+}
+
+.contact-info-area h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #262522;
+    margin-bottom: 10px;
+}
+
+.contact-info-area p {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contact-info-area a {
+    text-decoration: underline;
+    font-size: 20px;
+    color: #363732;
+    font-weight: 500;
+    display: block;
+}
+
+.contact-info-area a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* toogle */
+/* .navbar-toggler #checkbox {
+    display: none;
+}
+
+.navbar-toggler .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .3s;
+}
+
+.navbar-toggler .bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(12, 12, 12);
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+
+
+.navbar-toggler #checkbox:checked+.toggle #bar2 {
+    transform: translateY(14px) rotate(60deg);
+    margin-left: 0;
+    transform-origin: right;
+    transition-duration: .3s;
+    z-index: 2;
+}
+
+.navbar-toggler #checkbox:checked+.toggle #bar1 {
+    transform: translateY(28px) rotate(-60deg);
+    transition-duration: .3s;
+    transform-origin: left;
+    z-index: 1;
+}
+
+.navbar-toggler #checkbox:checked+.toggle {
+    transform: rotate(-90deg);
+} */
+
+.navbar-toggler,
+.navbar-toggler:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.accordion-button::after {
+    width: 12.73px;
+    height: 7.78px;
+    background-image: url(../images/down.png) !important;
+}
