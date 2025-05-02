@@ -27,12 +27,16 @@
     .bannerContainer .bnrtextBlock h1 {
         font-size: 40px;
         margin-top: 5rem;
+        text-align: center;
     }
 
     .bannerContainer .bnrtextBlock p {
         width: 100%;
+        text-align: center;
     }
-
+    .bannerContainer .bnr-btn{
+        margin: 0 auto;
+    }
     .hero {
         height: 60dvh;
     }
@@ -304,20 +308,31 @@
     .inner-banner.archivebanner h1 {
         margin-top: 7rem;
     }
+    .archiveTableArea{
+        margin-bottom: 2rem;
+    }
+    .bannerContainer .bnrtextBlock{
+        width: 93%;
+    }
 }
 
 @media (max-width: 480px) {
     .bannerContainer .bnrtextBlock h1 {
         font-size: 30px;
-        margin-top: 0;
+        margin-top: 2rem;
+        text-align: center;
     }
 
     .bannerContainer .bnrtextBlock p {
         font-size: 18px;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .hero {
-        height: 70dvh;
+        height: 85dvh;
     }
 
     .bannerContainer .bnr-btn {

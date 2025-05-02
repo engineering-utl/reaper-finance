@@ -2,8 +2,11 @@
 
 <!-- Inner Banner Section -->
 <section class="inner-banner archivebanner">
-    
-        <img src="<?= base_url('uploads/blogs/' . $blog['image']) ?>" alt="Blog Image">
+        <?php if (!empty($blog['image'])): ?>
+            <img src="<?= base_url('uploads/blogs/' . $blog['image']) ?>" alt="Blog Image">
+        <?php else: ?>
+            <img src="<?= base_url('assets/images/noimage-banner.png') ?>" alt="No Image Available">
+        <?php endif; ?>
         <div class="overcontnt">
         <div class="container">
             <div class="d-flex flex-column align-items-start w-100">
@@ -54,18 +57,22 @@
     <div class="skewed" style="background: #222224;"></div>
     <div class="container position-relative">
         <h5>The Author</h5>
-        <h2><?= $blog['blogger_name'] ?></h2>
+        <!-- <h2><?= $blog['blogger_name'] ?></h2> -->
 
         <!-- Blogger Details Section -->
         <section class="executive-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 px-2">
+                    <div class="col-md-4 px-2 mx-auto">
                         <div class="executive-card">
-                            <img src="<?= base_url('uploads/blogs/' . $blog['blogger_image']) ?>" alt="<?= $blog['blogger_name'] ?>">
-                            <div class="executive-info">
+                            <?php if (!empty($blog['blogger_image'])): ?>
+                                <img src="<?= base_url('uploads/blogs/' . $blog['blogger_image']) ?>" alt="<?= $blog['blogger_name'] ?>">
+                            <?php else: ?>
+                                <img src="<?= base_url('assets/images/no-image.jpg') ?>" alt="No Image Available">
+                            <?php endif; ?>
+                            <div class="executive-info blg-dtl">
                                 <h5><?= $blog['blogger_name'] ?></h5>
-                                <p>Author</p>
+                                <!-- <p>Author</p> -->
                                 
                             </div>
                         </div>

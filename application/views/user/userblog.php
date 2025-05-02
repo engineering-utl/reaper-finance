@@ -38,12 +38,22 @@
                 <div class="col-md-6 mb-4">
                   <div class="card blog-card h-100">
                     <div class="position-relative reapingposter">
-                      <img src="<?= base_url('uploads/blogs/' . $blog['image']) ?>" class="card-img-top" alt="Debt Reaping" id="cr_reap_itm01_postr">
+                      <?php if (!empty($blog['image'])): ?>
+                        <img src="<?= base_url('uploads/blogs/' . $blog['image']) ?>" class="card-img-top" alt="Debt Reaping" id="cr_reap_itm01_postr">
+                      <?php else: ?>
+                          <img src="<?= base_url('assets/images/noimage-banner.png') ?>" class="card-img-top" alt="No Image Available">
+                      <?php endif; ?>
                       <!-- <span class="badge position-absolute m-2 editable" id="cr_reap_itm01_badge" contenteditable="true">DEBT REAPING</span> -->
                     </div>
                     <div class="card-body bg-black text-white">
                       <div class="d-flex align-items-center mb-2">
-                        <img src="<?= base_url('uploads/blogs/' . $blog['blogger_image']) ?>" alt="Author" class="me-2 user-photo" id="cr_reap_itm01_userphoto">
+                    
+                        <?php if (!empty($blog['blogger_image'])): ?>
+                          <img src="<?= base_url('uploads/blogs/' . $blog['blogger_image']) ?>" alt="Author" class="me-2 user-photo" id="cr_reap_itm01_userphoto">
+                        <?php else: ?>
+                            <img src="<?= base_url('assets/images/no-image.jpg') ?>" class="me-2 user-photo" alt="No Image Available">
+                        <?php endif; ?>
+
                         <small class="text-heading"><?= $blog['blogger_name'] ?> .   <span><?= date('F j, Y', strtotime($blog['date'])) ?></span></small>
                       </div>
                       <h5 class="card-title fw-bold mt-4 "  id="cr_reap_itm01_headline"><?= $blog['title'] ?></h5>

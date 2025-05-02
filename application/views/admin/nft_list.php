@@ -11,7 +11,7 @@
                 <div class="d-flex align-items-center justify-content-end">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?= base_url('Dashboard') ?>">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">NFTs</li>
                         </ol>
                     </nav>
@@ -83,14 +83,8 @@
                             <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" name="title" id="title" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="image" class="form-label">NFT Image</label>
-                            <input type="file" class="form-control" name="image" id="image">
-                        </div>
-                        <div class="mb-3">
-                            <label for="handler_image" class="form-label">Handler Image</label>
-                            <input type="file" class="form-control" name="handler_image" id="handler_image">
-                        </div>
+                        
+                        
                         <div class="mb-3">
                             <label for="handler_name" class="form-label">Handler Name</label>
                             <input type="text" class="form-control" name="handler_name" id="handler_name" required>
@@ -110,6 +104,16 @@
                                 <option value="disabled">Disabled</option>
                             </select>
                         </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">NFT Image</label>
+                            <input type="file" name="image" id="image">
+                            <div id="imagePreview"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="handler_image" class="form-label">Handler Image</label>
+                            <input type="file" name="handler_image" id="handler_image">
+                            <div id="imagePreview2"></div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Save</button>
@@ -122,6 +126,8 @@
     <script>
         $(document).ready(function () {
             $('#addNftBtn').click(function () {
+                $('#imagePreview').html('');
+                $('#imagePreview2').html('');
                 $('#nftForm')[0].reset();
                 $('#nft_id').val('');
                 $('#nftModalLabel').text('Add NFT');
@@ -138,6 +144,8 @@
                     $('#price').val(nft.price);
                     $('#external_link').val(nft.external_link);
                     $('#status').val(nft.status);
+                    $('#imagePreview').html('<img src="<?= base_url('uploads/nfts/') ?>' + nft.image + '" width="100" height="100">');
+                    $('#imagePreview2').html('<img src="<?= base_url('uploads/nfts/') ?>' + nft.handler_image + '" width="100" height="100">');
                     $('#nftModalLabel').text('Edit NFT');
                     $('#nftModal').modal('show');
                 });
@@ -158,6 +166,54 @@
                         location.reload();
                     }
                 });
+            });
+
+            // Function to preview images before uploading
+            $('#image').change(function(e) {
+                var files = e.target.files;
+
+                if (files.length > 0) {
+                    var html = '';
+                    for (var i = 0; i < files.length; i++) {
+                        var file = files[i];
+
+                        if (file.type.match('image.*')) {
+                            var reader = new FileReader();
+                            reader.onload = function(event) {
+                                html += '<img src="' + event.target.result + '" width="100" height="100" style="margin: 5px;">';
+                                $('#imagePreview').html(html);  // Update preview div
+                            };
+                            reader.readAsDataURL(file);  // Read file as DataURL (for preview)
+                        } else {
+                            alert('Not an image file:' + file.type);
+                            $('#image').val('');
+                        }
+                    }
+                }
+            });
+
+            // Function to preview images before uploading
+            $('#handler_image').change(function(e) {
+                var files = e.target.files;
+
+                if (files.length > 0) {
+                    var html = '';
+                    for (var i = 0; i < files.length; i++) {
+                        var file = files[i];
+
+                        if (file.type.match('image.*')) {
+                            var reader = new FileReader();
+                            reader.onload = function(event) {
+                                html += '<img src="' + event.target.result + '" width="100" height="100" style="margin: 5px;">';
+                                $('#imagePreview2').html(html);  // Update preview div
+                            };
+                            reader.readAsDataURL(file);  // Read file as DataURL (for preview)
+                        } else {
+                            alert('Not an image file:' + file.type);
+                            $('#handler_image').val('');
+                        }
+                    }
+                }
             });
         });
     </script>

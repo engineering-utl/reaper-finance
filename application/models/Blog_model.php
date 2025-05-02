@@ -30,6 +30,10 @@ class Blog_model extends CI_Model {
         return $this->db->get()->result_array();
     }
 
+    public function get_all_active() {
+        return $this->db->where('status', 'enabled')->get('blogs')->result_array();
+    }
+
     // Get total count of blogs for pagination
     public function count_all($search = '') {
         $this->db->select('*');

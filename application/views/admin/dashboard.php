@@ -24,10 +24,7 @@
                         <div class="d-flex align-items-center justify-content-end">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                                    <!-- <li class="breadcrumb-item active" aria-current="page">Dashboard</li> -->
                                 </ol>
                             </nav>
                         </div>
@@ -44,7 +41,12 @@
                 <!-- ============================================================== -->
                 <!-- Sales chart -->
                 <!-- ============================================================== -->
-
+                <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f4f4f4; margin-top: -100px;">
+                    <div style="background-color: #ffffff; padding: 40px 60px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); text-align: center;">
+                        <h1 style="font-size: 2.5rem; font-family: Arial, sans-serif; color: #333;">Dashboard Coming Soon</h1>
+                        <p style="font-size: 1.1rem; color: #666;">We're working on something awesome!</p>
+                    </div>
+                </div>
 
                 <!-- ============================================================== -->
                 <!-- Ravenue - page-view-bounce rate -->
@@ -54,12 +56,8 @@
                 <!-- ============================================================== -->
                 <div class="row">
 
-
-                </div>
-                <!-- ============================================================== -->
-                <!-- Recent comment and chats -->
-                <!-- ============================================================== -->
-            </div>
+</div>
+</div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->

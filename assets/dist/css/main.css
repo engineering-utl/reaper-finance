@@ -141,6 +141,16 @@ header .nav-link {
 	top: 15dvh;
 	position: relative;
 }
+.hero::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+    height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+}
 
 .hero .graph img {
 	width: 100%;
@@ -1448,7 +1458,7 @@ header .nav-link {
 }
 
 .footer ul li a {
-	color: #000;
+	color: #5b5b5b;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
@@ -1635,12 +1645,15 @@ header .nav-link {
 }
 
 .executive-info {
-	padding: 60px;
+	padding: 60px; 
 	box-sizing: border-box;
 	background: #d9d9d9;
 	width: 80%;
 	margin: -58px auto 0;
 	position: relative;
+}
+.executive-info.blg-dtl{
+	padding: 20px;
 }
 
 .executive-info h5 {

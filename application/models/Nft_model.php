@@ -12,6 +12,10 @@ class Nft_model extends CI_Model {
         return $this->db->get('nfts')->result_array();
     }
 
+    public function get_all_active() {
+        return $this->db->where('status', 'enabled')->get('nfts')->result_array();
+    }
+
     public function get($id) {
         return $this->db->get_where('nfts', ['id' => $id])->row_array();
     }

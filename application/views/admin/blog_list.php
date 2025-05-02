@@ -19,7 +19,7 @@
                 <div class="d-flex align-items-center justify-content-end">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?= base_url('Dashboard') ?>">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Archives</li>
                         </ol>
                     </nav>
@@ -121,21 +121,21 @@
                     <div class="modal-body">
                         <input type="hidden" name="id" id="blog_id">
                         <div class="mb-3">
-                            <label for="sub_header" class="form-label">Sub Header</label>
+                            <label for="sub_header" class="form-label">Title</label>
                             <input type="text" class="form-control" name="sub_header" id="sub_header" required>
                         </div>
                         <div class="mb-3">
-                            <label for="header_description" class="form-label">Header Description</label>
-                            <input type="hidden" name="header_description" id="header_description" required>
-                            <div id="editor"></div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="title" class="form-label">Title</label>
+                            <label for="title" class="form-label">Sub Header</label>
                             <input type="text" class="form-control" name="title" id="title" required>
                         </div>
                         <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
+                            <label for="description" class="form-label">Archive Description</label>
                             <textarea class="form-control" name="description" id="description" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="header_description" class="form-label">Content</label>
+                            <input type="hidden" name="header_description" id="header_description" required>
+                            <div id="editor"></div>
                         </div>
                         <div class="mb-3">
                             <label for="blogger_name" class="form-label">Author Name</label>
@@ -157,10 +157,12 @@
                         <div class="mb-3">
                             <label for="blogger_image" class="form-label">Author Image</label>
                             <input type="file" name="blogger_image" id="blogger_image">
+                            <div id="imagePreview"></div>
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Archive Image</label>
                             <input type="file" name="image" id="image">
+                            <div id="imagePreview2"></div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -197,6 +199,8 @@
 
         // Add Blog Button - Clear form and show modal
         $('#addBlogBtn').click(function () {
+            $('#imagePreview').html('');
+            $('#imagePreview2').html('');
             $('#blogForm')[0].reset();
             $('#blog_id').val('');
             $('#blogModalLabel').text('Add Archive');
@@ -210,6 +214,7 @@
 
         // Edit Blog Button - Fetch and populate data in modal
         $('.editBlogBtn').click(function () {
+            window.editor.setData('');
             const id = $(this).data('id');
             $.get('<?= base_url('Blog/edit/') ?>' + id, function (data) {
                 const blog = JSON.parse(data);
@@ -220,6 +225,8 @@
                 $('#blogger_name').val(blog.blogger_name);
                 $('#date').val(blog.date);
                 $('#status').val(blog.status);
+                $('#imagePreview').html('<img src="<?= base_url('uploads/blogs/') ?>' + blog.blogger_image + '" width="100" height="100">');
+                $('#imagePreview2').html('<img src="<?= base_url('uploads/blogs/') ?>' + blog.image + '" width="100" height="100">');
                 $('#blogModalLabel').text('Edit Archive');
                 $('#blogModal').modal('show');
                 
@@ -250,6 +257,54 @@
                     location.reload(); // Reload the page after successful submission
                 }
             });
+        });
+
+        // Function to preview images before uploading
+        $('#image').change(function(e) {
+            var files = e.target.files;
+
+            if (files.length > 0) {
+                var html = '';
+                for (var i = 0; i < files.length; i++) {
+                    var file = files[i];
+
+                    if (file.type.match('image.*')) {
+                        var reader = new FileReader();
+                        reader.onload = function(event) {
+                            html += '<img src="' + event.target.result + '" width="100" height="100" style="margin: 5px;">';
+                            $('#imagePreview2').html(html);  // Update preview div
+                        };
+                        reader.readAsDataURL(file);  // Read file as DataURL (for preview)
+                    } else {
+                        alert('Not an image file:' + file.type);
+                        $('#image').val('');
+                    }
+                }
+            }
+        });
+
+        // Function to preview images before uploading
+        $('#blogger_image').change(function(e) {
+            var files = e.target.files;
+
+            if (files.length > 0) {
+                var html = '';
+                for (var i = 0; i < files.length; i++) {
+                    var file = files[i];
+
+                    if (file.type.match('image.*')) {
+                        var reader = new FileReader();
+                        reader.onload = function(event) {
+                            html += '<img src="' + event.target.result + '" width="100" height="100" style="margin: 5px;">';
+                            $('#imagePreview').html(html);  // Update preview div
+                        };
+                        reader.readAsDataURL(file);  // Read file as DataURL (for preview)
+                    } else {
+                        alert('Not an image file:' + file.type);
+                        $('#blogger_image').val('');
+                    }
+                }
+            }
         });
     });
     </script>

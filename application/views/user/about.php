@@ -76,7 +76,11 @@
                 <?php foreach ($executives as $executive): ?>
                     <div class="col-md-4 px-2">
                         <div class="executive-card">
-                            <img src="<?= base_url('uploads/executives/' . $executive['image']) ?>" alt="<?= $executive['name'] ?>">
+                            <?php if (!empty($executive['image'])): ?>
+                                <img src="<?= base_url('uploads/executives/' . $executive['image']) ?>" alt="<?= $executive['name'] ?>">
+                            <?php else: ?>
+                                <img src="<?= base_url('assets/images/no-image.jpg') ?>" alt="No Image Available">
+                            <?php endif; ?>
                             <div class="executive-info">
                                 <h5><?= $executive['name'] ?></h5>
                                 <p><?= $executive['position'] ?></p>

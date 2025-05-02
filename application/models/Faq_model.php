@@ -27,6 +27,10 @@ class Faq_model extends CI_Model {
         return $this->db->get()->result_array();
     }
 
+    public function get_all_active() {
+        return $this->db->where('status', 'enabled')->get('faqs')->result_array();
+    }
+
     // Get total count of FAQs for pagination
     public function count_all($search = '') {
         $this->db->select('*');

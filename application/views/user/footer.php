@@ -21,14 +21,14 @@
           <div class="col-md-7">
             <div class="row">
               <div class="col-md-3">
-                <h5>Ecosystem</h5>
+                <h5 class="editable" id="cr_footer_header1" contenteditable="true">Ecosystem</h5>
                 <ul>
                   <?php 
                   if($Ecosystem): foreach ($Ecosystem as $key => $value):?>
                   <li><a href="<?=$value['link']?>"> <?=$value['title']?></a></li>
                   <?php endforeach; endif;?>
                 </ul>
-                <h5 class="mt-5">QFS Family</h5>
+                <h5 class="mt-5 editable" id="cr_footer_header4" contenteditable="true">QFS Family</h5>
                 <ul>
                 <?php 
                   if($ReaperFamily): foreach ($ReaperFamily as $key => $value):?>
@@ -37,14 +37,14 @@
                 </ul>
               </div>
               <div class="col-md-3">
-                <h5>Social Media</h5>
+                <h5 class="editable" id="cr_footer_header2" contenteditable="true">Social Media</h5>
                 <ul>
                 <?php 
                   if($SocialMedia): foreach ($SocialMedia as $key => $value):?>
                   <li><a href="<?=$value['link']?>"> <?=$value['title']?></a></li>
                   <?php endforeach; endif;?>
                 </ul>
-                <h5 class="mt-5">Legal</h5>
+                <h5 class="mt-5 editable" id="cr_footer_header5" contenteditable="true">Legal</h5>
                 <ul>
                 <?php 
                   if($Legal): foreach ($Legal as $key => $value):?>
@@ -53,7 +53,7 @@
                 </ul>
               </div>
               <div class="col-md-3">
-                <h5>Main Menu</h5>
+                <h5 class="editable" id="cr_footer_header3" contenteditable="true">Main Menu</h5>
                 <ul>
                 <?php 
                   if($MainMenu): foreach ($MainMenu as $key => $value):?>

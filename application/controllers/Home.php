@@ -22,9 +22,9 @@ class Home extends CI_Controller {
         $data['menu'] = 'Information';
         $data['roadmaps'] = $this->Roadmap_model->get_enabled();
         $data['reviews'] = $this->Customer_reviews_model->get_all();
-        $data['nfts'] = $this->Nft_model->get_all(); // Fetch all NFTs
-        $data['blogs'] = $this->Blog_model->get_all(); // Fetch all blogs
-        $data['faqs'] = $this->Faq_model->get_all(); // Fetch all FAQs
+        $data['nfts'] = $this->Nft_model->get_all_active(); // Fetch all NFTs
+        $data['blogs'] = $this->Blog_model->get_all_active(); // Fetch all blogs
+        $data['faqs'] = $this->Faq_model->get_all_active(); // Fetch all FAQs
 
         // For footer common
         $data['Ecosystem'] = $this->Menu_model->get_menu_items('Ecosystem');

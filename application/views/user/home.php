@@ -185,7 +185,7 @@
           </div> -->
 
           <blockquote class="twitter-tweet" data-theme="dark" align="center">
-            <a href="<?= preg_replace('/https?:\/\/x\.com/i', 'https://twitter.com', $review['link']) ?>"></a>
+            <a href="<?= preg_replace('/https?:\/\/x\.com/i', 'https://twitter.com', $review['link']) ?>" data-dnt="true"></a>
           </blockquote>
         <?php endforeach; ?>
       </div>
@@ -283,11 +283,19 @@
                     <?php foreach ($chunk as $blog): ?>
                         <div class="capitalItem">
                             <div class="capital-poster">
-                                <img src="<?= base_url('uploads/blogs/' . $blog['image']) ?>" alt="Blog Image" />
+                                <?php if (!empty($blog['image'])): ?>
+                                    <img src="<?= base_url('uploads/blogs/' . $blog['image']) ?>" alt="Blog Image">
+                                <?php else: ?>
+                                    <img src="<?= base_url('assets/images/archive_posternoimg.png') ?>" alt="No Image Available">
+                                <?php endif; ?>
                             </div>
                             <div class="capital-content">
                                 <div class="user">
-                                    <img src="<?= base_url('uploads/blogs/' . $blog['blogger_image']) ?>" alt="Blogger Image" />
+                                <?php if (!empty($blog['blogger_image'])): ?>
+                                    <img src="<?= base_url('uploads/blogs/' . $blog['blogger_image']) ?>" alt="<?= $blog['blogger_name'] ?>">
+                                <?php else: ?>
+                                    <img src="<?= base_url('assets/images/capital-user-no-img.png') ?>" alt="No Image Available">
+                                <?php endif; ?>
                                 </div>
                                 <h3 class="userName"><?= $blog['blogger_name'] ?>    <?= date('F j, Y', strtotime($blog['date'])) ?></h3>
                                 <h2><?= $blog['title'] ?></h2>

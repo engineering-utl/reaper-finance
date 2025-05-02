@@ -11,7 +11,7 @@ class AuthMiddleware {
 
     public function check() {
         if (!$this->CI->session->userdata('logged_in')) {
-            redirect('admin/login');
+            redirect('auth/admin_login');
         }
     }
 }

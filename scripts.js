@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// Load content from JSON
-	fetch(`${window.location.origin}/content.json`)
+	fetch('content.json')
 		.then((response) => response.json())
 		.then((data) => {
 			if (data) {
@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 							element.dataset.originalSrc = mergedJson[id];
 							element.src = mergedJson[id];
 						} else {
+							console.log(":: Loading content");
 							element.dataset.originalContent = mergedJson[id];
 							element.innerHTML = mergedJson[id];
 						}

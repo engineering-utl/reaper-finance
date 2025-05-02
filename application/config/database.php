@@ -76,10 +76,14 @@ load_env('/var/www/Capital/.env');
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $_ENV['database.default.hostname']?? 'localhost',
-	'username' => $_ENV['database.default.username']?? 'amituser',
-	'password' => $_ENV['database.default.password']?? 'Amit@1234',
-	'database' => $_ENV['database.default.database']?? 'Revival',
+	// 'hostname' => $_ENV['database.default.hostname']?? 'localhost',
+	// 'username' => $_ENV['database.default.username']?? 'amituser',
+	// 'password' => $_ENV['database.default.password']?? 'Amit@1234',
+	// 'database' => $_ENV['database.default.database']?? 'Revival',
+	'hostname' => 'localhost',
+	'username' => 'amit',
+	'password' => 'aa',
+	'database' => 'Revival',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

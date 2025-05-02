@@ -52,7 +52,7 @@
                                 </td>
                                 <td>
                                     <button class="btn btn-warning editExecutiveBtn" data-id="<?= $executive['id'] ?>" title="Edit"><img src="<?php echo base_url('assets/images/edit-dash.png'); ?>"  alt="Edit" /></button>
-                                    <a class="btn btn-danger" href="<?= base_url('admin/Executive/delete/' . $executive['id']) ?>" onclick="return confirm('Are you sure you want to delete this executive?')" title="Delete"><img src="<?php echo base_url('assets/images/delete.png'); ?>"  alt="Delete" /></a>
+                                    <a class="btn btn-danger" href="<?= base_url('Executive/delete/' . $executive['id']) ?>" onclick="return confirm('Are you sure you want to delete this executive?')" title="Delete"><img src="<?php echo base_url('assets/images/delete.png'); ?>"  alt="Delete" /></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -82,10 +82,6 @@
                             <input type="text" class="form-control" name="name" id="name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
-                            <input type="file" class="form-control" name="image" id="image">
-                        </div>
-                        <div class="mb-3">
                             <label for="position" class="form-label">Position</label>
                             <input type="text" class="form-control" name="position" id="position" required>
                         </div>
@@ -108,6 +104,11 @@
                                 <option value="disabled">Disabled</option>
                             </select>
                         </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Image</label>
+                            <input type="file" name="image" id="image">
+                            <div id="imagePreview"></div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Save</button>
@@ -120,6 +121,7 @@
     <script>
         $(document).ready(function () {
             $('#addExecutiveBtn').click(function () {
+                $('#imagePreview').html('');
                 $('#executiveForm')[0].reset();
                 $('#executive_id').val('');
                 $('#executiveModalLabel').text('Add Executive');
@@ -137,6 +139,7 @@
                     $('#x_link').val(executive.x_link);
                     $('#linkedin_link').val(executive.linkedin_link);
                     $('#status').val(executive.status);
+                    $('#imagePreview').html('<img src="<?= base_url('uploads/executives/') ?>' + executive.image + '" width="100" height="100">');
                     $('#executiveModalLabel').text('Edit Executive');
                     $('#executiveModal').modal('show');
                 });
@@ -157,6 +160,29 @@
                         location.reload();
                     }
                 });
+            });
+
+            $('#image').change(function(e) {
+                var files = e.target.files;
+
+                if (files.length > 0) {
+                    var html = '';
+                    for (var i = 0; i < files.length; i++) {
+                        var file = files[i];
+
+                        if (file.type.match('image.*')) {
+                            var reader = new FileReader();
+                            reader.onload = function(event) {
+                                html += '<img src="' + event.target.result + '" width="100" height="100" style="margin: 5px;">';
+                                $('#imagePreview').html(html);  // Update preview div
+                            };
+                            reader.readAsDataURL(file);  // Read file as DataURL (for preview)
+                        } else {
+                            alert('Not an image file:' + file.type);
+                            $('#image').val('');
+                        }
+                    }
+                }
             });
         });
     </script>
